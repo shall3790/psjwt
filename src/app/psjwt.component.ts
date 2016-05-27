@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { HTTP_PROVIDERS } from '@angular/http';
 import { HomeComponent } from './home';
 import { ContactComponent } from './contact';
 import { AboutComponent } from './about';
 import { RegisterComponent } from './register';
+import { PsjwtApiServiceService } from './psjwt-api-service.service';
 
 @Component({
   moduleId: module.id,
@@ -11,7 +13,7 @@ import { RegisterComponent } from './register';
   templateUrl: 'psjwt.component.html',
   styleUrls: ['psjwt.component.css'],
   directives: [ROUTER_DIRECTIVES],
-  providers: [ROUTER_PROVIDERS]
+  providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS, PsjwtApiServiceService,]
 })
 @Routes([
   {path: '/home', component: HomeComponent},
