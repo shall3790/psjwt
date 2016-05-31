@@ -1,0 +1,6 @@
+<p *ngIf="!isAuthenticated">
+  <a [routerLink]="['/register']">Register</a>
+</p>
+<p *ngIf="isAuthenticated">
+  <i class="fa fa-user"></i> &nbsp;&nbsp;&nbsp;&nbsp;<i (click)="logout()" class="fa fa-sign-out" aria-hidden="true"></i>
+</p>

@@ -10,11 +10,15 @@
       <a class="navbar-brand" href="#">Brand</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <p class="navbar-text navbar-right" id="nav-userId">
+          <app-user-component></app-user-component>
+      </p>
       <ul class="nav navbar-nav">
         <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/jobs']">Jobs</a></li>
         <li><a [routerLink]="['/about']">About</a></li>
-        <li><a [routerLink]="['/register']">Register</a></li>
         <li><a [routerLink]="['/contact']">Contact</a></li>
+        <!--<li><a [routerLink]="['/register']">Register</a></li>-->
       </ul>
     </div> 
   </nav>
